@@ -4,4 +4,39 @@ format: gfm
 editor: visual
 ---
 
-## 
+## Fish Scale Analysis
+
+order of operations
+
+- Add/stage
+
+- commit button (RStudio)
+
+  - write commit message
+
+  - commit button (window)
+
+  - pull
+
+  - push
+
+Load the tidyverse and the dataset
+
+```{r}
+library(tidyverse)
+fish_data <- read_csv("../data/Gaeta_etal_CLC_data.csv")
+```
+
+Observe the dataset
+
+```{r}
+head(fish_data)
+```
+
+Summary statistics for fish scale length
+
+```{r}
+fish_data |> 
+  summarize(min_scale_length = min(scalelength, na.rm = T), 
+            max_scale_length = max(scalelength, na.rm = T))
+```
