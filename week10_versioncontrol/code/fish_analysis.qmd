@@ -41,3 +41,17 @@ fish_data |>
             max_scale_length = max(scalelength, na.rm = T), 
             mean_scale_length = mean(scalelength, na.rm = T))
 ```
+
+You discover that the device used to measure the scale length of the fish in `Gaeta_etal_CLC_data.csv` is not accurate for those smaller than 1 mm.
+
+In the `fish_analysis.qmd` file, create a new data frame that does not include fish with scale lengths of less than 1 mm from `fish_data`. The new dataset will have 4,029 rows (see answer key).
+
+Use the `write_csv()` function to save this new data frame as a CSV file. It should be in an appropriate sub-directory.
+
+Commit this change to version control with a good commit message.
+
+Once you've made the commit, push the commit to your repo. Pop over to GitHub to ensure that the `.qmd` file and the new dataset are there.
+
+```{r}
+
+```
